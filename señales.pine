@@ -29,4 +29,4 @@ plotshape(isSellSignal, title="Vender", location=location.abovebar, color=color.
 plotshape(isBuySignal, title="Comprar", location=location.belowbar, color=color.new(color.green, 0), style=shape.triangleup, text="Comprar")
 
 // Enviar una alerta si esta vela cumple las condiciones.
-alertcondition(isRsiOB or isRsiOS or isBBBottom or isBBTop, title="Señal Activada!", message="Señal Compra/Venta activada para XXX")
+alertcondition(isSellSignal or isBuySignal, title="Señal Activada!", message="Señal Compra/Venta activada para XXX")
